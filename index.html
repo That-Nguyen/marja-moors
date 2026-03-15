@@ -1118,7 +1118,7 @@ a,button{-webkit-tap-highlight-color:transparent;}
           <li><a href="https://maps.google.com/?q=Kerkstraat+135+Kerkdriel" target="_blank">5331 CD Kerkdriel</a></li>
           <li><a href="https://maps.google.com/?q=Kerkstraat+135+Kerkdriel" target="_blank">Gelderland</a></li>
           <li><a href="tel:0638374681" style="color:var(--moss-light);">06 38 37 46 81</a></li>
-          <li><a href="mailto:de.valeriaan@outlook.com" style="color:var(--moss-light);">de.valeriaan@outlook.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#aacecf84dccbc6cfd8c3cbcbc4eac5dfdec6c5c5c184c9c5c7" style="color:var(--moss-light);"><span class="__cf_email__" data-cfemail="0c6869227a6d60697e656d6d624c63797860636367226f6361">[email&#160;protected]</span></a></li>
         </ul>
       </div>
 
@@ -1136,6 +1136,13 @@ a,button{-webkit-tap-highlight-color:transparent;}
 </footer>
 
 <script>
+/* scroll to hash on load (for links from subpages) */
+window.addEventListener('load',()=>{
+  if(window.location.hash){
+    const el=document.querySelector(window.location.hash);
+    if(el) setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),100);
+  }
+});
 /* mobile burger */
 const burger=document.getElementById('navBurger');
 const drawer=document.getElementById('navDrawer');
